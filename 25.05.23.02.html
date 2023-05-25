@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>KeyDown</h1>
+    <p>нажмите любую клавишу на клавиатуре:</p>
+    <p id="keyinfo">здесь будет отображаться нажатая клавиша</p>
+
+    <script>
+        function handleKeyDown(event){
+            var key = event.key;
+            
+            var keyInfoElement = document.getElementById("keyinfo");
+            keyInfoElement.textContent = "нажата клавиша: " + key;
+        }
+
+        document.addEventListener("keydown", handleKeyDown);
+    </script>
+</body>
+</html>
